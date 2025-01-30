@@ -8,20 +8,35 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
+function ContributorView({ name, email }: { name: string; email: string }) {
+  return (
+    <div className={styles.contributor}>
+      <h2>Contributor</h2>
+      <p><strong>Name:</strong> {name}</p>
+      <p>
+        <strong>Email:</strong> 
+        <a href={`mailto:${email}`} className={styles.emailLink}>
+          {email}
+        </a>
+      </p>
+    </div>
+  );
+}
+
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          React Native Reusable Component
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="">
+            Let's Start
           </Link>
         </div>
       </div>
@@ -36,9 +51,9 @@ export default function Home(): ReactNode {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      <ContributorView name="John Doe" email="john.doe@example.com" />
+      <ContributorView name="John Doe" email="john.doe@example.com" />
+      <ContributorView name="John Doe" email="john.doe@example.com" />
     </Layout>
   );
 }

@@ -1,10 +1,10 @@
-# React Native Components
+# Components
 
-# Custom Input Component for React Native 📝
+# Custom Text Input 
 
-## A customizable input component for React Native with support for various features such as error handling, icons, and password visibility toggle.
 
-### Features ✨
+
+### Features 
 
 - **Customizable Styles**: Easy to style with custom containers and input fields.
 - **Error Handling**: Displays error messages with customized styling.
@@ -14,7 +14,7 @@
 - **Focus & Blur Handling**: Dynamic styling on focus and blur.
 - **Text Alignment**: Option to align text at the top or center of the input field.
 
-## Props 📜
+## Props 
 
 The `CustomInput` component accepts the following props:
 
@@ -132,11 +132,10 @@ export default App;
 
 
 
-# Custom Button Component for React Native 🖲️
+# Custom Button 🖲️
 
-## A customizable button component for React Native with support for features like loading state, disabled state, custom styles, and text styling options.
 
-### Features ✨
+### Features 
 
 - **Customizable Styles**: Easily customize button styles through props.
 - **Loading State**: Displays a loading indicator when `loading` prop is `true`.
@@ -146,7 +145,7 @@ export default App;
 - **Text-Only Button**: Supports a text-only button style when `hastext` is `true`.
 - **Custom OnPress**: Pass a custom `onPress` function to handle button presses.
 
-## Props 📜
+## Props 
 
 The `CustomButton` component accepts the following props:
 
@@ -170,7 +169,7 @@ Here is an example of how to use the `CustomButton` component in your React Nati
 
 ```javascript
 import React, { useState } from "react";
-import CustomButton from "@components/general/button"; // Adjust the import path as needed
+import CustomButton from "@components/general/button"; 
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -180,7 +179,7 @@ const App = () => {
     setTimeout(() => {
       setLoading(false);
       alert("Button Pressed!");
-    }, 2000); // Simulate a loading state for 2 seconds
+    }, 2000); 
   };
 
   return (
@@ -241,11 +240,9 @@ If you want to show a loading spinner inside the button, you can set the `loadin
 <img src="/assets/buttonloading.png" height="150" width="800" />
 
 
-# Custom Radio Button Component for React Native ⚪🔘
+# Custom Radio Button 
 
-## A customizable radio button component for React Native that supports multiple options, error handling, custom styles, and selection behavior.
-
-### Features ✨
+### Features 
 
 - **Multiple Options**: Display multiple radio button options for selection.
 - **Error Handling**: Show error messages when validation fails.
@@ -254,7 +251,7 @@ If you want to show a loading spinner inside the button, you can set the `loadin
 - **Pre-selected Option**: Set a pre-selected option via the `selected` prop.
 - **Custom OnSelect Handler**: Define a custom behavior when an option is selected using the `onSelect` prop.
 
-## Props 📜
+## Props 
 
 The `CustomRadioInput` component accepts the following props:
 
@@ -342,11 +339,10 @@ You can customize the text style of the radio button options by passing a `texts
 ```
 <img src="/assets/radiostyle.png" height="150" width="800" />
 
-# Custom Switch Component for React Native ⚡
+# Custom Switch 
 
-## A highly customizable switch component for React Native with support for different states, custom styles, and dynamic indicators.
 
-### Features ✨
+### Features 
 
 - **Customizable Size**: Easily adjust the switch size through the `size` prop.
 - **Active & Inactive Colors**: Customize the active and inactive track and thumb colors.
@@ -355,7 +351,7 @@ You can customize the text style of the radio button options by passing a `texts
 - **Disable State**: The switch can be disabled when `disabled` prop is `true`.
 - **Callback on State Change**: Use the `onChange` prop to get the updated value when the switch state changes.
 
-## Props 📜
+## Props 
 
 The `CustomSwitch` component accepts the following props:
 
@@ -382,7 +378,7 @@ Here is an example of how to use the `CustomSwitch` component in your React Nati
 
 ```javascript
 import React, { useState } from "react";
-import CustomSwitch from "@components/general/CustomSwitch"; // Adjust the import path as needed
+import CustomSwitch from "@components/general/CustomSwitch"; 
 
 const App = () => {
   const [isEnabled, setIsEnabled] = useState(false);
